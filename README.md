@@ -6,7 +6,6 @@
 
 ## 功能
 
-- **Init** — 初始化 wiki 项目（目录结构 + Schema）
 - **Ingest** — 摄入新资料，自动生成摘要、实体、概念页面并建立交叉引用
 - **Query** — 基于 wiki 回答问题，有价值的回答自动归档
 - **Lint** — 巡检 wiki 健康度（矛盾、孤立页、缺失引用等）
@@ -23,7 +22,7 @@ npx skills add chenyium/llm-wiki-skill
 
 ```bash
 git clone https://github.com/chenyium/llm-wiki-skill.git
-ln -s /path/to/llm-wiki-skill/llm-wiki ~/.cursor/skills/llm-wiki
+ln -s /path/to/llm-wiki-skill/llm-wiki ~/.agents/skills/llm-wiki
 ```
 
 ## 使用
@@ -33,6 +32,22 @@ ln -s /path/to/llm-wiki-skill/llm-wiki ~/.cursor/skills/llm-wiki
 ```
 
 在对话中输入 `/llm-wiki` 即可调用。支持所有兼容 Agent Skills 的平台（Cursor、Claude Code、Codex、OpenCode 等）。
+
+### 典型使用流程
+
+```
+你：「帮我初始化一个 AI 论文研究 wiki，放在 ~/wikis/ai-research」
+我：创建目录、Schema、首次提交
+
+你：把论文 PDF 或 Markdown 放进 raw/，说「消化 raw/attention-is-all-you-need.md」
+我：生成摘要、创建实体页（Transformer、Google Brain）、概念页（Self-Attention）
+
+你：「Transformer 和 RNN 的核心区别是什么？」
+我：综合已有页面回答，并归档为 analyses/transformer-vs-rnn.md
+
+你：「巡检一下」
+我：报告问题、建议补充方向
+```
 
 ## 适用场景
 

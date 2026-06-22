@@ -2,7 +2,7 @@
 
 初始化 wiki 项目时，根据用户主题调整 `{{占位符}}` 后写入 Schema 文件。
 
-Schema 统一写入 `AGENTS.md`。
+Schema 文件名随平台而定：`CLAUDE.md`（Claude Code）、`AGENTS.md`（Codex/OpenCode）、`.cursorrules`（Cursor）等。
 
 ---
 
